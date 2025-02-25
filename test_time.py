@@ -52,7 +52,7 @@ class CusTom(torch.nn.Module):
         return x
 
 
-if __name__ == "__main":
+if __name__ == "__main__":
     model = CusTom()
     print("Model's state_dict:")
     for param_tensor in model.state_dict():
