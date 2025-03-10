@@ -68,6 +68,13 @@ def train_one_epoch(epoch_index, tb_writer):
             tb_writer.add_scalar('Loss/train', last_loss, tb_x)
             running_loss = 0.
 
+        print(i)
+        for name, param in model.named_parameters():
+            if "fc1l" in name:
+                print(name)
+                print(param.detach().numpy().flatten()[:10])
+                print("---------------")
+
     return last_loss
 
 
